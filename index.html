@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap stylesheet -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    /> -->
+    <!-- iconoir stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+    />
+    <!-- Animate on Scroll Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Parallax Landing</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Logo</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="./images/stars.png" id="stars" alt="" />
+      <img src="./images/moon.png" id="moon" alt="" />
+      <img src="./images/mountains_behind.png" id="mountains_behind" alt="" />
+      <h2 id="text">Moon Light</h2>
+      <a href="#" id="btn">Explore</a>
+      <img src="./images/mountains_front.png" id="mountains_front" alt="" />
+    </section>
+    
+      <div class="sec" id="sec">
+        <div class="containerSec">
+          <h2>EXPLORING THE WILD</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            aut, vel voluptates consequuntur ratione quibusdam illo nemo beatae
+            officia neque, reprehenderit ipsa aliquam ad eligendi laborum vero
+            distinctio minus quisquam! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Rem ullam consequuntur, ad earum eum <br />
+            <br />
+            cupiditate adipisci quod nihil ab nesciunt placeat autem laborum
+            incidunt libero cum? Ducimus nobis rerum dolor. Lorem ipsum, dolor
+            sit amet consectetur adipisicing elit. Cum eum harum, quis dolorem
+            laudantium amet voluptatum deserunt iure praesentium itaque sapiente
+            modi? Exercitationem facere dignissimos recusandae nam fuga
+            asperiores excepturi?
+          </p>
+        </div>
+
+        <div class="lCard"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          style="
+            width: 50%;
+            padding: 25px;
+            position: relative;
+            margin-bottom: 100px;
+            border-radius: 40px;
+            background: #1c0522;
+            box-shadow: 20px 20px 60px #655dc0, -20px -20px 60px #473cbd;
+          "
+        >
+          <h1 class="subtitle">Feel the wild</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            impedit, expedita veniam numquam ullam nesciunt quo animi esse omnis
+            facere. Eius modi ab consectetur vitae similique quis repellendus
+            facere quo.
+          </p>
+        </div>
+        <div class="rCard"
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          
+        >
+          <h1 class="subtitle">Feel the wild</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            impedit, expedita veniam numquam ullam nesciunt quo animi esse omnis
+            facere. Eius modi ab consectetur vitae similique quis repellendus
+            facere quo.
+          </p>
+        </div>
+        <div class="lCard"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          
+        >
+          <h1 class="subtitle">Feel the wild</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            impedit, expedita veniam numquam ullam nesciunt quo animi esse omnis
+            facere. Eius modi ab consectetur vitae similique quis repellendus
+            facere quo.
+          </p>
+        </div>
+        <br />
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non impedit,
+          expedita veniam numquam ullam nesciunt quo animi esse omnis facere.
+          Eius modi ab consectetur vitae similique quis repellendus facere quo.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div id="alien">
+      <img src="./images/alien.jpg" id="alien" alt="" /></div>
+    </section>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let mountains_front = document.getElementById("mountains_front");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.00 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        text.style.marginRight = value * 4 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+    <!-- BootStrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
